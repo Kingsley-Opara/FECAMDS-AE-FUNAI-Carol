@@ -10,3 +10,4 @@ dj-database-url
 # guincorn
 gunicorn
 uvicorn
+whitenoise
