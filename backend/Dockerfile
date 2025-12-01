@@ -26,6 +26,10 @@ RUN /opt/venv/bin/pip install pip --upgrade && \
     /opt/venv/bin/pip install -r requirements.txt --upgrade
 
 
+
+
 EXPOSE 8000
 
-CMD ["/opt/venv/bin/gunicorn", "/src/core.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4"]
+WORKDIR /app/src
+
+CMD ["/opt/venv/bin/gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4"]

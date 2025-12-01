@@ -5,3 +5,5 @@ scripts:
   - cd src && python manage.py makemigrations
   migrate:
   - cd src && python manage.py migrate
+  gunicorn:
+  - cd src && uvicorn core.asgi:application --host 0.0.0.0 --port 8000 --reload
