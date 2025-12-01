@@ -1,0 +1,7 @@
+django
+django-ninja
+rav
+email-validator
+django-cors-headers
+python-decouple
+requests

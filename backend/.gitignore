@@ -1,0 +1,25 @@
+# Python
+*.pyc
+__pycache__/
+*~
+*.log
+.coverage
+.tox/
+
+# Virtual Environment
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Django
+*.pot
+local_settings.py
+db.sqlite3
+media/
+
+# IDE-specific files (optional, can be added to a global gitignore instead)
+.idea/  # For PyCharm/IntelliJ
+.vscode/ # For VS Code
+.DS_Store # macOS Finder files
