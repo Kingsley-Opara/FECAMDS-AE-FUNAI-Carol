@@ -5,6 +5,7 @@ email-validator
 django-cors-headers
 python-decouple
 requests
-psycopg2
+psycopg2-binary
 dj-database-url
 # guincorn
+gunicorn

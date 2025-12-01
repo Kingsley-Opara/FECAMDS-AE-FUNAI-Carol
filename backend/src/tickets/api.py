@@ -49,7 +49,7 @@ def create_ticket(request, payload: RegisterTicket):
     number_t = int(ticket.number_of_ticket)
     print(email, number_t)
     data = initilaize_payment(email, number_t)
-    print(data)
+    # print(data)
     return data
 
 
