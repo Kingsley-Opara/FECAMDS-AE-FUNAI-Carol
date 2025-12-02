@@ -13,3 +13,6 @@ class Payment(models.Model):
     email = models.EmailField(max_length=256)
     referenceId = models.CharField(max_length=300)
     name = models.CharField(max_length=256)
+
+    def __str__(self):
+        return self.name
