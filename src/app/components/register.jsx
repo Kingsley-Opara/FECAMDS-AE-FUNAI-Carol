@@ -9,10 +9,15 @@ function Registration() {
 
     const paystackPublicKey = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY
 
+    const backend_domain = process.env.NEXT_PUBLIC_DJANGO_BACKEND_URL
+
     async function verifyPayment(reference) {
         try {
-            const res = await fetch(`http://localhost:8000/ticket/api/paystack/verify/${reference}`)
+            const res = await fetch(`${backend_domain}/ticket/api/paystack/verify/${reference}`)
             const data = await res.json()
+            if (data.data.status === "success"){
+                window.location.href = "/success"
+            }
             console.log("Verification result:", data)
         } catch (err) {
             console.error("Error verifying payment:", err)
@@ -27,13 +32,14 @@ function Registration() {
         const data = {
             email: formData.get("email"),
             number_of_ticket: formData.get("ticketNumber"),
+            name: formData.get("name")
         }
 
         
 
         e.target.reset()
 
-        const res = await fetch("http://localhost:8000/ticket/api/", {
+        const res = await fetch(`${backend_domain}/ticket/api/`, {
             method: "POST",
             headers: {
                 "Content-Type":"application/json",
@@ -57,7 +63,7 @@ function Registration() {
         
         const dataEmail = String(data.email)
         const ticketNumberPurchase = data.number_of_ticket
-
+        const ticketName = data.name
         console.log(dataEmail, "hrllo")
 
         const handler = window.PaystackPop.setup({
@@ -65,6 +71,7 @@ function Registration() {
             email: dataEmail,
             amount: (parseInt(ticketNumberPurchase) * 1000) * 100, // convert Naira to Kobo
             currency: "NGN",
+            firstname: ticketName,
             // callback: function (response) {
             //     onSuccess(response.reference);
             // },
@@ -119,6 +126,17 @@ function Registration() {
                     placeholder='Enter email' 
                     id='email'/>
                 </div>
+
+                <div className='flex flex-col space-y-5 mt-3'>
+                    <label htmlFor="email" className='font-bold font-monda text-xl' >Full Name</label>
+                    <input 
+                    type="text"
+                    name='name'
+                    className='border-2 border-gray-300 w-[70%] px-6 h-14 rounded-lg font-monda'
+                    placeholder='John Doe' 
+                    id='name'/>
+                </div>
+
                 <input type="text" 
                 className='hidden'
                 name='ticketNumber'
@@ -132,7 +150,7 @@ function Registration() {
                     <div>
                         <button 
                         className='h-12 w-12 bg-gray-100 cursor-pointer 
-                        text-gray-300 py-1 text-2xl px-2'
+                        text-gray-300 py-1 text-2xl px-2 hover:bg-gray-400'
                         onClick={(e)=>{handleSubtractCount(), e.preventDefault()}}
                         >
                             <FaMinus className='text-2xl'/>
@@ -145,7 +163,7 @@ function Registration() {
                     <div>
                         <button 
                         className='h-12 w-12 bg-orange-500 
-                        cursor-pointer 
+                        cursor-pointer hover:bg-orange-700
                         text-gray-300 py-1 text-2xl px-2'
                         onClick={(e)=>{handleAddCount(), e.preventDefault()}}
                         >
@@ -160,7 +178,7 @@ function Registration() {
                 <button
                 type='submit' 
                 className='w-[90%] h-15 bg-gray-200 
-                text-gray-400 rounded-lg cursor-pointer'>
+                text-gray-400 rounded-lg cursor-pointer hover:bg-[#DC4A56]'>
                     Buy ticket
 
                 </button>

@@ -8,9 +8,12 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoIosMoon } from "react-icons/io";
 import { CiLight } from "react-icons/ci";
 import { MdLaptopChromebook } from "react-icons/md";
-
+import { useGlobalContext } from '../context'
 
 function Navbar() {
+    const {show, setShow, toggleShow} = useGlobalContext()
+    
+
     const [showThemeOpt, setShowThemOpt] = useState(false)
     const [mounted, setMounted] = useState(false)
     const { theme, setTheme, systemTheme } = useTheme();
@@ -42,8 +45,10 @@ function Navbar() {
             <div className='flex space-x-6'>
                 <div>
                     <button className='px-4 py-2 bg-orange-500 
-                    text-white rounded-2xl cursor-pointer mt-0 
-                    hover:bg-orange-400 max-md:-mt-2 max-sm:text-xs'>
+                    text-white rounded-2xl cursor-pointer mt-5
+                    hover:bg-orange-400 max-md:-mt-2 max-sm:text-xs'
+                    onClick={()=>toggleShow()}
+                    >
                         Register Now
 
                     </button>

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function CarolPage() {
   return (
-    <div>
+    <div className='bg-gray-100 py-12 dark:bg-black'>
         <div className='mt-10 flex place-content-center justify-center self-center space-x-0'>
             <div>
                 <Image src={"/images/carol-design.png"} 

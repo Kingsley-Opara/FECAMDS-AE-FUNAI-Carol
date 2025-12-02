@@ -7,6 +7,8 @@ import About from "./components/About";
 import { GlobalStateProvider } from "./context";
 import CarolPage from "./components/CarolPage";
 import Speakers from "./components/Speakers";
+import Footer from "./components/Footer";
+
 
 
 export default function Home() {
@@ -18,6 +20,7 @@ export default function Home() {
         <About/>
         <CarolPage/>
         <Speakers/>
+        <Footer/>
       </GlobalStateProvider>
       
 

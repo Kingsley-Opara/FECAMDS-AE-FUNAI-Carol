@@ -10,6 +10,7 @@ api = NinjaAPI()
 class RegisterTicket(Schema):
     email: str
     number_of_ticket: str
+    name: str
 
 
 class RegisterTicketOut(Schema):
@@ -47,7 +48,8 @@ def create_ticket(request, payload: RegisterTicket):
     ticket = Ticket.objects.create(**payload.dict())
     email = ticket.email
     number_t = int(ticket.number_of_ticket)
-    print(email, number_t)
+    name = ticket.name
+    print(email, number_t, name)
     data = initilaize_payment(email, number_t)
     # print(data)
     return data
