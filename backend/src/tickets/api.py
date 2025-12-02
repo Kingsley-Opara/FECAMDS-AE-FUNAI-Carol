@@ -1,9 +1,9 @@
 from ninja import Schema, NinjaAPI, Query
-from .models import Ticket
+from .models import Ticket, Payment
 from typing import List
 import requests
 from django.conf import settings
-
+import json
 
 api = NinjaAPI()
 
@@ -73,10 +73,21 @@ def paystack_verify(request, reference:str):
 
     res = requests.get(url, headers=headers)
     data = res.json()
+
     print(data)
 
     if data["status"] and data["data"]["status"] == "success":
-        pass
+        customer = data["data"]["customer"]
+        email = customer["email"]
+        name = customer["first_name"]
+        referenceId = data["data"]["reference"]
+        # print(email, name, referenceId, "udo")
+        # print("Hello boy")
+        obj = Payment.objects.create(email=email, referenceId=referenceId, name=name)
+        obj.save()
+        return data
+        
+        
 
     return data
         
