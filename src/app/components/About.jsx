@@ -16,7 +16,7 @@ function About() {
                 birthed the  
                 FECAMDS-AEFUNAI choir, a developmet that has had tremendous impact on the 
                 association.
-                Givig an oppoutunity for our students to win souls through evangelism with 
+                Giving an oppoutunity for our students to win souls through evangelism with 
                 their God given talents.
 
             </p>
