@@ -27,7 +27,7 @@ function About() {
                 They have worked tirelessly for months amid their busy schedules to prepare 
                 for this event, to win souls through the power of music and bring joy to the heavens. 
                 10 songs, 9 lessons from the fecamds choir, guest performances from other choirs, 
-                kareoke's of your favourite christian songs etc. The event promises to be uplifting, educating and transforming.
+                karaoke of your favourite christmas songs, etc. The event promises to be uplifting, educating and transforming.
                 God bless you as you join us in the celebration of the birth of our redeemer.
             </p>
 

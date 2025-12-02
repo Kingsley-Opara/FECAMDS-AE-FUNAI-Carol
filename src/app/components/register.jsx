@@ -10,7 +10,7 @@ function Registration() {
     const paystackPublicKey = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY
 
     const backend_domain = process.env.NEXT_PUBLIC_DJANGO_BACKEND_URL
-
+    const [dataForm, setDataForm] = useState({})
     async function verifyPayment(reference) {
         try {
             const res = await fetch(`${backend_domain}/ticket/api/paystack/verify/${reference}`)
@@ -34,6 +34,7 @@ function Registration() {
             number_of_ticket: formData.get("ticketNumber"),
             name: formData.get("name")
         }
+        setDataForm(data)
 
         
 
@@ -177,8 +178,8 @@ function Registration() {
             <div className='mt-10'>
                 <button
                 type='submit' 
-                className='w-[90%] h-15 bg-gray-200 
-                text-gray-400 rounded-lg cursor-pointer hover:bg-[#DC4A56]'>
+                className={`w-[90%] h-15 ${dataForm ? "hover:bg-[#DC4A56]": bg-gray-200} 
+                text-gray-400 rounded-lg cursor-pointer hover:bg-[#DC4A56]`}>
                     Buy ticket
 
                 </button>
