@@ -9,12 +9,12 @@ function Footer() {
     <div className='bg-[#DC4A56] mt-10 px-4 py-3'>
         <div className='ml-10 flex place-content-between px-10 max-md:flex-col 
         max-md:place-content-center space-y-5'>
-            <div className='flex'>
+            <div className='flex max-md:flex-col'>
                 <div className=''>
                     <Image src={"/images/carol-design.png"} 
-                    alt='image' height={200} width={200}/>
+                    alt='image' height={200} width={200} className=''/>
                 </div>
-                <div className='text-white text-4xl font-monda mt-21 font-bold flex space-x-5'>
+                <div className='text-white text-4xl font-monda mt-21 font-bold flex space-x-5 max-md:-mt-8'>
                     <span className='text-pink-300'>OF</span> 
                     <span className='font-monda text-yellow-100'> Nine Lessons</span>
 

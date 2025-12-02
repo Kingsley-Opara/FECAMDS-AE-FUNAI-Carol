@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { loc } from '../utilis'
 function Speakers() {
   return (
-    <div className='mt-35 ml-15'>
+    <div className='mt-35 ml-15 max-md:ml-8'>
         <div className='text-3xl font-monda font-extrabold'>
             Meet the LOC Members
         </div>
