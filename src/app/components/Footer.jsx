@@ -21,7 +21,7 @@ function Footer() {
 
                 </div>
             </div>
-            <div className='my-auto flex flex-col space-y-3 font-monda'>
+            <div className='my-auto flex flex-col space-y-3 font-monda text-white'>
                 <p>For enquires and sponsorships</p>
                 <p>Call: +2347041060482</p>
                 <div className='flex space-x-4'>

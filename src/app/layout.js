@@ -38,7 +38,7 @@ const montserrate = Montserrat({
   weight: ["400"]
 })
 
-export const metadata = {
+const metadata = {
   title: "Fecamds AE-FUNAI",
   description: "Carol of Nine Lessons",
 };

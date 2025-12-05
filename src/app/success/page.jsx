@@ -8,7 +8,8 @@ function Success() {
     <div>
         <Navbar/>
 
-        <div className='items-center flex place-content-center mt-40 flex-col'>
+        <div className='items-center flex place-content-center mt-40 flex-col mx-auto 
+        self-center align-middle my-auto justify-center max-md:ml-10'>
             <div className='flex space-x-3'>
                 <div>
                     <Image src={'/images/good.png'} height={40} width={40} alt='image'/>

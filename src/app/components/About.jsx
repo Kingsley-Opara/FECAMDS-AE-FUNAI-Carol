@@ -21,7 +21,7 @@ function About() {
 
             </p>
             <p className='mt-5 leading-normal'>
-                This years carol is to be held on the <span className='font-bold'>13th of December </span>. 
+                This years carol is to be held on the <span className='font-bold'>14th of December </span>. 
                 The choir intends to 
                 not just render songs but to remind us of the essence of the birth of our saviour.
                 They have worked tirelessly for months amid their busy schedules to prepare 
