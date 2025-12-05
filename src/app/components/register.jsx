@@ -171,6 +171,9 @@ function Registration() {
                         <option value="St Francis class">St Francis class</option>
                         <option value="St Mary class">St Mary class</option>
                         <option value="St Raphael class">St Raphael class</option>
+                        <option value="St Bendict class">St Bendict class</option>
+                        <option value="St Lucy">St Lucy</option>
+                        <option value="St Micheal">St Micheal</option>
                     </select>
                 </div>
                 <div className='flex flex-col space-y-5 mt-3'>
@@ -190,6 +193,7 @@ function Registration() {
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
+                        <option value="2025">2025</option>
                     </select>
 
                 </div>

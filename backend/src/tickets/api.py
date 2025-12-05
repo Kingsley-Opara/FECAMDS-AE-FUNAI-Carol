@@ -14,6 +14,9 @@ class FecamdsEnum(str, Enum):
     ST_FRANCIS_CLASS = "St Francis class"
     ST_MARY_CLASS = "St Mary class"
     ST_RAPHAEL_CLASS = "St Raphael class"
+    ST_BENDICT_CLASS = "St Bendict class"
+    ST_LUCY_CLASS = "St Lucy class"
+    ST_MICHEAL_CLASS = "St Micheal class"
 
 
 class SetEnum(str, Enum):
@@ -25,6 +28,7 @@ class SetEnum(str, Enum):
     SET_2022 = "2022"
     SET_2023 = "2023"
     SET_2024 = "2024"
+    SET_2025 = "2025"
 
 
 

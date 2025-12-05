@@ -10,30 +10,14 @@ export const loc = [
     },
     {
         id: 2,
-        image: "/images/chinwe.jpg",
-        role: "Editor in Cheif",
+        image: "/images/tonio.jpeg",
+        role: "Chapter President",
         location: "FECAMDS AE-FUNAI",
-        name: "Igwemka chinwe"
+        name: "Awformata Anthonio. C"
 
     },
     {
         id: 3,
-        image: "/images/mesoma.jpeg",
-        role: "PRO",
-        location: "FECAMDS AE-FUNAI",
-        name: "Igwe Mesoma"
-
-    },
-    {
-        id: 4,
-        image: "/images/tonio.jpeg",
-        role: "Awformata Anthonio. C",
-        location: "FECAMDS AE-FUNAI",
-        name: "Igwe Mesoma"
-
-    },
-    {
-        id: 5,
         image: "/images/george.jpeg",
         role: "Choir Coordinator",
         location: "FECAMDS AE-FUNAI",
@@ -41,11 +25,38 @@ export const loc = [
 
     },
     {
-        id: 6,
+        id: 4,
+        image: "/images/chioma.jpeg",
+        role: "Chapter Vice President/Chior Coordinator",
+        location: "FECAMDS AE-FUNAI",
+        name: "Udeh Chioma"
+
+    },
+    {
+        id: 5,
         image: "/images/micheal.jpeg",
         role: "Choir Coordinator",
         location: "FECAMDS AE-FUNAI",
         name: "Odinakachi Micheal Chidera"
 
     },
+    {
+        id: 6,
+        image: "/images/chinwe.jpg",
+        role: "Editor in Cheif",
+        location: "FECAMDS AE-FUNAI",
+        name: "Igwemka chinwe"
+
+    },
+    {
+        id: 7,
+        image: "/images/mesoma.jpeg",
+        role: "PRO",
+        location: "FECAMDS AE-FUNAI",
+        name: "Igwe Mesoma"
+
+    },
+
+
+
 ]

@@ -12,6 +12,9 @@ class FecamdsClassName(models.TextChoices):
     ST_FRANCIS_CLASS = "St Francis class", "St Francis class"
     ST_MARY_CLASS = "St Mary class", "St Mary class"
     ST_RAPHAEL_CLASS = "St Raphael class", "St Raphael class"
+    ST_BENDICT_CLASS = "St Bendict class", "St Bendict class"
+    ST_LUCY_CLASS = "St Lucy class", "St Lucy class"
+    ST_MICHEAL_CLASS = "St Micheal class", "St Micheal class"
 
 class SetYearList(models.TextChoices):
     SET_2017 = "2017", "2017"
@@ -22,6 +25,7 @@ class SetYearList(models.TextChoices):
     SET_2022 = "2022", "2022"
     SET_2023 = "2023", "2023"
     SET_2024 = "2024", "2024"
+    SET_2025 = "2025", "2025"
 
 
 
@@ -77,13 +81,14 @@ class Payment(models.Model):
     
     def save(self, *args, **kwargs):
         ticket = self.ticket
-        ticket_fecamds_class = ticket.fecamds_class
-        ticket_set_year = ticket.set_year
-        if self.fecamds_class is None and ticket_fecamds_class is not None:
-            self.fecamds_class = ticket_fecamds_class
+        if ticket is not None:
+            ticket_fecamds_class = ticket.fecamds_class
+            ticket_set_year = ticket.set_year
+            if self.fecamds_class is None and ticket_fecamds_class is not None:
+                self.fecamds_class = ticket_fecamds_class
 
-        if self.set_year is None:
-            self.set_year = ticket_set_year
+            if self.set_year is None:
+                self.set_year = ticket_set_year
 
         
         return super().save(*args, **kwargs)
