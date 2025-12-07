@@ -45,7 +45,7 @@ function Navbar() {
             <div className='flex space-x-6'>
                 <div>
                     <button className='px-4 py-2 bg-orange-500 
-                    text-white rounded-2xl cursor-pointer mt-5
+                    text-white rounded-2xl cursor-pointer mt-1
                     hover:bg-orange-400 max-md:-mt-2 max-sm:text-xs'
                     onClick={()=>toggleShow()}
                     >
