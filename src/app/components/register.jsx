@@ -42,7 +42,7 @@ function Registration() {
             set_year: formData.get("setYear")
         }
         
-        e.target.reset()
+        // e.target.reset()
         
 
         
