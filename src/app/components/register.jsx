@@ -63,7 +63,7 @@ function Registration() {
 
         const response = await res.json()
         
-        if (!response?.data?.reference) return alert("Initialization failed")
+        if (!response?.data?.reference) {console.log(response)}
         setTicketID(response.ticket_id)
         const reference = response.data.reference
         
@@ -172,8 +172,8 @@ function Registration() {
                         <option value="St Mary class">St Mary class</option>
                         <option value="St Raphael class">St Raphael class</option>
                         <option value="St Bendict class">St Bendict class</option>
-                        <option value="St Lucy">St Lucy</option>
-                        <option value="St Micheal">St Micheal</option>
+                        <option value="St Lucy class">St Lucy class</option>
+                        <option value="St Micheal class">St Micheal class</option>
                     </select>
                 </div>
                 <div className='flex flex-col space-y-5 mt-3'>
