@@ -34,10 +34,10 @@ export const loc = [
     },
     {
         id: 5,
-        image: "/images/micheal.jpeg",
+        image: "/images/michael1.jpeg",
         role: "Choir Coordinator",
         location: "FECAMDS AE-FUNAI",
-        name: "Odinakachi Micheal Chidera"
+        name: "Odinakachi Michael Chidera"
 
     },
     {
