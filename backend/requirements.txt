@@ -11,3 +11,6 @@ dj-database-url
 gunicorn
 uvicorn
 whitenoise
+jupyter
+qrcode
+pillow
