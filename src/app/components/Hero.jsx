@@ -41,7 +41,7 @@ function Hero() {
               hover:bg-orange-400 text-lg flex space-x-2'
               onClick={() =>{toggleShow()}}
               >
-                  <p>See you Tomorrow</p>
+                  <p>Register Now</p>
                   <FaArrowRight className='mt-2'/>
 
               </button>
@@ -86,8 +86,8 @@ function Hero() {
               className='text-3xl cursor-pointer text-gray-400'/>
 
           </div>
-          {/* <Registration/> */}
-          <Thanks/>
+          <Registration/>
+          {/* <Thanks/> */}
         </div>
         
         

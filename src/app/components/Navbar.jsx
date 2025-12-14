@@ -43,7 +43,7 @@ function Navbar() {
             </div>
 
             <div className='flex space-x-6'>
-                {/* <div>
+                <div>
                     <button className='px-4 py-2 bg-orange-500 
                     text-white rounded-2xl cursor-pointer mt-1
                     hover:bg-orange-400 max-md:-mt-2 max-sm:text-xs'
@@ -52,7 +52,7 @@ function Navbar() {
                         Register Now
 
                     </button>
-                </div> */}
+                </div>
 
                 <div className='px-3 flex py-1 border-1 border-black dark:border-white w-20
                 rounded-xl h-8 space-x-3 text-2xl cursor-pointer relative'>

@@ -106,7 +106,7 @@ function Registration() {
 
 
         });
-        // handler.openIframe();
+        handler.openIframe();
 
     }
 
